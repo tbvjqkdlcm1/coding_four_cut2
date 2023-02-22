@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 이서윤체 폰트 적용을 위한 코드 */
+        @font-face {
+          font-family: "LeeSeoyun";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+            format("woff");
+          font-weight: normal;
+          font-style: normal;
+        }
+        /* body태그 자체에 css 요소 부여 */
+        body {
+            font-family: "LeeSeoyun";
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("./background.png");
+        }
+
+        .container {
+            width: 390px;
+            background-color: #9ED6C0;
+            height: 100%;
+        }
+
+        .photos {
+            margin-top: 30px;
+        }
+
+        .photo-frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 200px;
+
+            background-size: contain;
+            position: relative;
+        }
+        /* 아래 영역 전체는, flexible하게 하되 그 내부 아이템들은 세로로 쌓을거야 */
+        /* 근데 모두 가운데 정렬 했으면 좋겠어! */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* 아래 영역의 제목 부분은 폰트가 좀 두껍고, 사이즈는 25픽셀! 흰색으로 */
+        .f-title {
+            font-size: 25px;
+            font-weight: 900;
+            color: white;
+        }
+        /* 아래 영역의 날짜 부분은 폰트가 중간 두께고, 사이즈는 15픽셀! 흰색으로 */
+        .f-date {
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+        }
+
+        #image1 {
+            background-image: url("./img5.jpeg");
+        }
+        
+        #image2 {
+            background-image: url("./img6.jpeg");
+        }
+        
+        #image3 {
+            background-image: url("./img7.jpeg");
+        }
+        
+        #image4 {
+            background-image: url("./img8.jpeg");
+        }
+
+        .photo-description {
+            /* 배경은 검게, 글자는 흰 색으로 */
+            color: white;
+            background-color: black;
+        
+            /* 가로 너비는 내부 콘텐츠에 딱 맞게! */
+            width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        
+            /* 경계선 */
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%);
+            left: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+			<div class="photos">
+	      <div id="image1" class="photo-frame">
+            <span id="desc1" class="photo-description">
+                이 다리를 건너면..
+            </span>
+          </div>
+	      <div id="image2" class="photo-frame">
+            <span id="desc1" class="photo-description">
+                노을 지리고
+            </span>
+          </div>
+	      <div id="image3" class="photo-frame">
+            <span id="desc1" class="photo-description">
+                in 제주
+            </span>
+          </div>
+	      <div id="image4" class="photo-frame">
+            <span id="desc1" class="photo-description">
+                렁남러ㅐㅑㅇㄴ머래ㅑㅇㄴ물
+            </span>
+          </div>
+			</div>
+      <div class="footer">
+        <p class="f-title">Happy Nodab</p>
+        <p class="f-date">2023.02.22</p>
+      </div>
+    </div>
+</body>
+</html>
